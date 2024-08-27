@@ -1,10 +1,44 @@
-# simulation_de_comande_cp
-ce programme simule la commande cp 
+# Simulation de la commande `cp`
 
-pour l'uilisation :
+Ce projet implémente une simulation de la commande Unix `cp`, permettant de copier le contenu de fichiers vers d'autres fichiers ou vers un répertoire.
+
+## Compilation
+
+Pour compiler le programme, exécutez la commande suivante :
+
+```bash
 gcc cp.c -o cp
-1er cas : passer deux fichier 
-Exemple : ./cp monfichier1 monfichier2 (copie le contenur du 1er fichier en 2eme fichier )
+```
 
-2eme cas : passer pluieur fichier et un répertoire 
-Exemple : ./cp monfichier1 monfichier2 monfichier3 rep (copie le contenu des 3 fichier dans rep (si les fichiers n'existe pas il seront cree)
+## Utilisation
+
+Le programme prend en charge deux scénarios d'utilisation :
+
+### 1. Copier le contenu d'un fichier vers un autre fichier
+
+**Commande :**
+```bash
+./cp fichier_source fichier_cible
+```
+
+**Exemple :**
+```bash
+./cp monfichier1 monfichier2
+```
+
+Cette commande copie le contenu de `monfichier1` dans `monfichier2`. Si `monfichier2` n'existe pas, il sera créé.
+
+### 2. Copier plusieurs fichiers vers un répertoire
+
+**Commande :**
+```bash
+./cp fichier1 fichier2 fichier3 répertoire
+```
+
+**Exemple :**
+```bash
+./cp monfichier1 monfichier2 monfichier3 rep
+```
+
+Cette commande copie le contenu de `monfichier1`, `monfichier2`, et `monfichier3` dans le répertoire `rep`. Si les fichiers n'existent pas dans `rep`, ils seront créés.
+
